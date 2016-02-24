@@ -69,7 +69,7 @@ class MultiInsertTest < ::ActiveSupport::TestCase
   end
 
   def attribute_names
-    %w(name seo_url document_type_id created_at updated_at)
+    %w(name seo_url document_type_id status_id created_at updated_at)
   end
 
   def attribute_values
