@@ -26,8 +26,8 @@ class MultiInsertTest < ::ActiveSupport::TestCase
   end
 
   def test_ignore_attributes
-    @subject = ::MultiInsert.new([record], { :model => Object, :ignore_attributes => ["authors"] })
-    expected = %w(id authors)
+    @subject = ::MultiInsert.new([record], { :model => Object, :ignore_attributes => ["user_id"] })
+    expected = %w(id user_id)
     assert_equal(expected, @subject.ignore_attributes)
   end
 
