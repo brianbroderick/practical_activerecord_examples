@@ -1,0 +1,11 @@
+homepage_content:
+  document: homepage
+  body: This is the homepage.
+
+page_one_content:
+  document: page_one
+  body: This is the text for the first page.
+
+post_one_content:
+  document: post_one
+  body: This is the text for the first post.

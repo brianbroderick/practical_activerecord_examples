@@ -1,0 +1,8 @@
+pending:
+  name: Pending
+
+active:
+  name: Active
+
+deleted:
+  name: Deleted

@@ -1,0 +1,9 @@
+homepage_details:
+  document: homepage
+  meta: {
+    viewport: "width=device-width, initial-scale=1, user-scalable=no",
+    apple_mobile: "yes",
+    apple_status_bar: "black",
+    og_site_name: "ActiveRecord Examples",
+    og_title: "Practical ActiveRecord Examples"
+  }

@@ -1,0 +1,17 @@
+homepage:
+  name: My Website
+  seo_url: my_website
+  document_type: page
+  status: active
+
+page_one:
+  name: Page one
+  seo_url: page_one
+  document_type: page
+  status: active
+
+post_one:
+  name: Post one
+  seo_url: post_one
+  document_type: post
+  status: active

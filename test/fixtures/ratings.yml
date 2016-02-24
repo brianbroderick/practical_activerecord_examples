@@ -1,0 +1,14 @@
+home_page:
+  document: homepage
+  up_vote: 42
+  down_vote: 12
+
+page_one:
+  document: page_one
+  up_vote: 7
+  down_vote: 4
+
+post_one:
+  document: post_one
+  up_vote: 19
+  down_vote: 3
