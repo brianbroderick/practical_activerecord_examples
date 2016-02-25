@@ -61,6 +61,20 @@ class Examples
     Rails.logger.info "Body:   #{homepage.body}"
   end
 
+  def self.everything_but_the_homepage
+    records = Document
+                .select("documents.name, contents.body")
+                .joins(:contents)
+                .joins("LEFT JOIN homepages ON homepages.document_id = documents.id")
+                .where("homepages.id IS NULL")
+
+    records.each do |record|
+      Rails.logger.info "Name: #{record.name}"
+      Rails.logger.info "Body:   #{record.body}"
+      Rails.logger.info "########################"
+    end
+  end
+
   # SELECT ROUND((up_vote::NUMERIC / (up_vote::NUMERIC + down_vote::NUMERIC)),2)::FLOAT AS approval_rating
   # FROM "documents"
   # INNER JOIN "ratings"
@@ -108,6 +122,15 @@ class Examples
 
     records.each do |record|
       Rails.logger.info "Name: #{record.name}"
+      Rails.logger.info "Viewport: #{record.viewport}"
+    end
+  end
+
+  def self.jsonb_with_hash_serializer
+    records = Detail
+                .where("details.meta->>'og_site_name' ilike '%ActiveRecord%'")
+
+    records.each do |record|
       Rails.logger.info "Viewport: #{record.viewport}"
     end
   end
