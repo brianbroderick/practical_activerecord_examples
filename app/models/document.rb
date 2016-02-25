@@ -4,4 +4,5 @@ class Document < ActiveRecord::Base
   has_many :ratings
   has_many :contents
   has_one  :homepage
+  has_one  :detail
 end
